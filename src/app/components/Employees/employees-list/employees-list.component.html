@@ -1,0 +1,28 @@
+<div class="container my-5"> 
+    <h2>Employees</h2>
+
+<table  class="styled-table" *ngIf="employees">
+<thead  class="styled-table thead tr">
+    <tr>
+    <th>Id</th>
+    <th>Email</th>
+    <th>First name</th>
+    <th>Last Name</th>
+    <th>Avatar</th>
+</tr>
+</thead>
+<tbody>
+    <tr *ngFor="let employees of employeeApi.data">
+        <td>{{employees.id}}</td>
+        <td>{{employees.email}}</td>
+        <td>{{employees.first_name}}</td>
+        <td>{{employees.last_name}}</td>
+        <td class="p-2"><img src={{employees.avatar}} /></td>
+        <td class="pt-5"><button (click)="sendToCHild(employees.id)"  >Details</button></td>
+    </tr>
+</tbody>
+</table>
+<p *ngIf="!employees">No employees right now!</p>
+
+</div>
+

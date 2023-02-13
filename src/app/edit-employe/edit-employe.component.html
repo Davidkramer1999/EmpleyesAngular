@@ -1,0 +1,24 @@
+<form >
+  <div class="row">
+    <div class="mx-auto col-10 col-md-8 col-lg-6">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Id</label>
+    <input disabled  [(ngModel)]="this.employee.id" type="text" name="id" class="form-control" id="exampleFormControlInput1" >
+  </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input  disabled [(ngModel)]="this.employee.email" type="email" name="email" class="form-control" id="exampleFormControlInput1" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">First name</label>
+      <input disabled  [(ngModel)]="this.employee.first_name" type="text" name="firstName" class="form-control" id="firstName" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Last  name</label>
+      <input  disabled [(ngModel)]="this.employee.last_name" type="text" name="lastName" class="form-control" id="lastName" >
+    </div>
+    <img class="pt-2 " src={{employee.avatar}} />
+    <div class="pt-3"><button (click)="goBack()">Go back</button></div>
+    </div>
+  </div>
+  </form>
